@@ -1,0 +1,8 @@
+{
+  "name": "Smart Micro-Irrigation & Groundwater Predictor",
+  "description": "AI and IoT-based agricultural system for soil moisture monitoring, crop water requirement prediction, groundwater shortage forecasting, and smart drip irrigation control.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
