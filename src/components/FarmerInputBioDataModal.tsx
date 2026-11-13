@@ -486,7 +486,6 @@ export const FarmerInputBioDataModal: React.FC<FarmerInputBioDataModalProps> = (
                     </div>
                     <div>
                       <span className="text-[11px] font-mono font-bold text-emerald-400 uppercase tracking-wider">
-                        PMKSY & Jal Shakti Aligned
                       </span>
                       <h3 className="text-lg font-black text-white">
                         {isHindi ? 'किसान खेत बायोडाटा व जल रिपोर्ट' : 'Farmer Farm Bio-Data & Water Card'}
@@ -599,15 +598,7 @@ export const FarmerInputBioDataModal: React.FC<FarmerInputBioDataModalProps> = (
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row items-center gap-3">
-                <button
-                  onClick={handleShareWhatsApp}
-                  className="w-full sm:w-1/2 py-3 px-4 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-xs shadow-md border border-slate-700 transition-all flex items-center justify-center gap-2 cursor-pointer"
-                >
-                  <Share2 className="w-4 h-4 text-emerald-400" />
-                  <span>{isHindi ? 'WhatsApp पर बायोडाटा भेजें' : 'Share on WhatsApp'}</span>
-                </button>
-
-                <button
+                 <button
                   onClick={handleSaveAndApply}
                   className="w-full sm:w-1/2 py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs shadow-xl shadow-emerald-950/50 transition-all flex items-center justify-center gap-2 cursor-pointer"
                 >

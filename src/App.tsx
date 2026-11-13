@@ -582,17 +582,7 @@ export default function App() {
         }}
       />
 
-      {/* Rural-Friendly Footer */}
-      <footer className="border-t border-slate-900 bg-slate-950 py-5 px-4 text-center text-xs text-slate-400 space-y-1">
-        <p className="font-bold text-slate-300">
-          HydroSense KISAN • {language === 'hi' ? 'भारतीय किसान सूक्ष्म-सिंचाई व भूजल संरक्षण प्रणाली' : 'Indian Smart Micro-Irrigation & Aquifer Protection'}
-        </p>
-        <p className="text-[11px] text-slate-500">
-          {language === 'hi'
-            ? 'जल शक्ति अभियान व प्रधानमंत्री कृषि सिंचाई योजना (PMKSY) के वैज्ञानिक मानकों पर आधारित'
-            : 'Aligned with Jal Shakti Abhiyan & Pradhan Mantri Krishi Sinchayee Yojana (PMKSY)'}
-        </p>
-      </footer>
+      
 
     </div>
   );

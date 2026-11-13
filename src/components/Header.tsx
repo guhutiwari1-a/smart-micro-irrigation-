@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { Droplets, Activity, CloudSun, PowerOff, Sparkles, MapPin, Volume2, Globe2, Award, FileText, Radio, ShieldCheck } from 'lucide-react';
+import { Droplets, Activity, CloudSun, PowerOff, Sparkles, MapPin, Volume2, Globe2, Award, FileText, Radio } from 'lucide-react';
 import { WeatherData, LanguageMode } from '../types/irrigation';
 import { ALL_INDIAN_STATES, IndianDistrictData } from '../data/indianLocations';
 
@@ -64,12 +64,6 @@ export const Header: React.FC<HeaderProps> = ({
       <div className="bg-gradient-to-r from-emerald-950 via-slate-900 to-teal-950 border-b border-emerald-500/30 px-3 py-1 text-[11px] text-slate-300">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 text-center sm:text-left">
           <div className="flex items-center gap-1.5 flex-wrap justify-center sm:justify-start">
-            <span className="text-amber-400 font-bold">🇮🇳 भारत सरकार •</span>
-            <span className="text-emerald-300 font-bold">
-              {isHindi
-                ? 'जल शक्ति अभियान एवं प्रधानमंत्री कृषि सिंचाई योजना (PMKSY) के वैज्ञानिक मानकों पर आधारित'
-                : 'Aligned with Jal Shakti Abhiyan & PMKSY (Per Drop More Crop) Scientific Standards'}
-            </span>
             <span className="hidden md:inline text-slate-500">•</span>
             <span className="hidden md:inline text-amber-200">
               {isHindi ? 'प्रति बूंद अधिक फसल' : 'Per Drop More Crop'}
@@ -109,7 +103,7 @@ export const Header: React.FC<HeaderProps> = ({
                 </span>
               </h1>
               
-              {/* Nationwide Location Dropdown (North, South, East, West, Central) */}
+              {/* Nationwide Location Dropdown */}
               <div className="flex items-center gap-1 bg-slate-900 border border-slate-700 rounded-xl px-2.5 py-1 text-xs">
                 <MapPin className="w-3.5 h-3.5 text-amber-400 shrink-0" />
                 <select
@@ -164,19 +158,7 @@ export const Header: React.FC<HeaderProps> = ({
               {isHindi ? 'बारिश' : 'Rain'}: {weather.rainProbabilityPct}%
             </span>
           </div>
-
-          {/* PMKSY Scheme Details Button */}
-          {onOpenPmksyModal && (
-            <button
-              onClick={onOpenPmksyModal}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-emerald-500/40 text-emerald-300 text-xs font-bold transition-all cursor-pointer shadow-sm"
-              title={isHindi ? 'PMKSY व जल शक्ति अभियान के मानक' : 'PMKSY & Jal Shakti Standards'}
-            >
-              <Award className="w-3.5 h-3.5 text-amber-400" />
-              <span>{isHindi ? 'PMKSY मानक' : 'PMKSY Standards'}</span>
-            </button>
-          )}
-
+          
           {/* Farm Bio-Data Input Center Button */}
           <button
             onClick={onOpenBiodataModal}
